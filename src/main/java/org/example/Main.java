@@ -16,6 +16,11 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.UUID;
 
+
+@GetMapping("/hello")
+public String hello(){
+    return "hello";
+}
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -38,7 +43,6 @@ public class Main {
                         String firstName = sc.next();
                         System.out.println("Enter last name ");
                         String lastName = sc.next();
-                        System.out.println("Enter age");
                         int age = sc.nextInt();
                         Person p = new Person()
                                     .setFirstName(firstName)
